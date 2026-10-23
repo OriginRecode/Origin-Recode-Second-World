@@ -189,3 +189,24 @@ h2 span { color: var(--gold); }
   .site-footer { padding: 25px 6%; flex-direction: column; text-align: center; gap: 12px; }
   .site-footer p { line-height: 1.7; }
 }
+
+
+/* Creator story and official social links */
+.creator-section { padding-top: 115px; padding-bottom: 120px; border-top: 1px solid rgba(112,161,211,.1); background: linear-gradient(135deg, rgba(8,15,27,.82), rgba(5,8,14,.96)); }
+.creator-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(36px, 7vw, 100px); margin-top: 54px; }
+.creator-heading h2 { font: 700 clamp(30px, 4vw, 52px)/1.18 var(--font-display); letter-spacing: -.035em; margin: 18px 0; }
+.creator-heading h2 span { color: var(--gold); }
+.creator-signature { color: #9aaac0; font-size: 13px; line-height: 1.8; max-width: 350px; }
+.creator-story p { color: #aab6c7; font-size: 14px; line-height: 1.95; margin: 0 0 18px; }
+.creator-story strong { color: #e9eff8; }
+.creator-closing { border-left: 2px solid var(--gold); padding-left: 18px; color: #e0c98c !important; }
+.creator-socials, .update-social-links, .footer-socials { display: flex; flex-wrap: wrap; gap: 12px; }
+.creator-socials { margin-top: 30px; }
+.creator-socials a, .update-social-links a { border: 1px solid rgba(116,165,219,.28); padding: 12px 15px; font: 600 10px var(--font-display); letter-spacing: .07em; color: #d8e6f7; transition: border-color .2s, background .2s; }
+.creator-socials a span { color: var(--gold); margin-left: 8px; }
+.creator-socials a:hover, .update-social-links a:hover { border-color: var(--gold); background: rgba(196,160,82,.08); }
+.update-social-links { margin-top: 18px; }
+.footer-brand-wrap { display: flex; flex-direction: column; gap: 12px; }
+.footer-socials a { font: 600 9px var(--font-display); letter-spacing: .12em; color: #9aaac0; }
+.footer-socials a:hover { color: var(--gold); }
+@media (max-width: 760px) { .creator-section { padding-top: 85px; padding-bottom: 85px; } .creator-layout { grid-template-columns: 1fr; gap: 28px; margin-top: 35px; } .creator-heading h2 { font-size: 34px; } .creator-socials a { font-size: 9px; } .footer-brand-wrap { align-items: center; } }
