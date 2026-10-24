@@ -18,3 +18,30 @@
 .character-portrait:before{z-index:2;pointer-events:none}
 @media(max-width:900px){.character-grid-six{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.gallery-large .gallery-image-link,.gallery-large .gallery-image.main-image{min-height:230px;aspect-ratio:16/9}.character-grid-six{grid-template-columns:1fr}}
+
+/* Final content layout: real screenshots are shown in their relevant sections. */
+:root{--body:Arial,Helvetica,sans-serif}
+.hero{background-image:linear-gradient(180deg,rgba(4,8,14,.68),rgba(4,8,14,.88) 65%,var(--bg)),url('assets/screenshots/main.png');background-size:cover;background-position:center}
+.hero-backdrop-image{display:none}
+.hero-jp{font:500 10px var(--display);letter-spacing:2px;color:var(--gold);margin:0 0 24px}
+.feature-card{min-height:0;padding-bottom:26px}
+.feature-image{display:block;position:relative;z-index:3;width:100%;height:auto;max-height:290px;aspect-ratio:16/9;object-fit:cover;margin:22px 0 0;border:1px solid var(--line);background:#05080d}
+.feature-art{display:none}
+.feature-tag{margin-top:18px}
+.story-screenshot{display:block;width:100%;max-height:340px;aspect-ratio:16/7;object-fit:cover;border:1px solid var(--line);margin-top:32px;background:#05080d}
+.gameplay-preview{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:20px}
+.gameplay-preview figure{margin:0;min-width:0;border:1px solid var(--line);background:#0a111b}
+.gameplay-preview img{display:block;width:100%;height:100%;min-height:180px;max-height:330px;object-fit:cover}
+.gameplay-preview figcaption{padding:12px 15px;font:10px var(--display);letter-spacing:1.2px;color:var(--gold2)}
+.character-portrait img{object-fit:contain}
+.character-portrait.zombie img{object-fit:contain}
+.character-info p{min-height:0;line-height:1.9}
+.character-card{height:100%}
+.character-portrait{background-color:#09111c}
+.character-portrait.zombie{background-color:#170d12}
+.game-icon-badge{display:flex;align-items:center;gap:14px;margin:28px auto 0;width:max-content;max-width:100%;text-align:left;border:1px solid var(--line);padding:10px 16px;background:rgba(8,15,24,.82)}
+.game-icon-badge img{width:58px;height:58px;object-fit:cover;border-radius:12px;border:1px solid var(--gold)}
+.game-icon-badge span{display:block;font:9px var(--display);letter-spacing:1.5px;color:var(--gold)}
+.game-icon-badge strong{display:block;font-size:13px;margin-top:3px}
+.search-aliases{font-size:9px!important;color:#687a8e!important;width:100%;text-align:center;flex-basis:100%;order:4}
+@media(max-width:720px){.gameplay-preview{grid-template-columns:1fr}.gameplay-preview img{min-height:0}.story-screenshot{aspect-ratio:16/9}.game-icon-badge{margin-top:20px}}

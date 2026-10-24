@@ -5,14 +5,26 @@
     menuButton.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('open');
       menuButton.setAttribute('aria-expanded', String(isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+      menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     });
     nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
       nav.classList.remove('open');
       menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'メニューを開く');
+      menuButton.setAttribute('aria-label', 'Open menu');
     }));
   }
+  // GitHub Pages is case-sensitive. If an image was uploaded as JPG/JPEG/WebP,
+  // try common extensions before leaving a broken-image icon on the page.
+  document.querySelectorAll('img[src$=".png"]').forEach(img => {
+    const original = img.getAttribute('src');
+    const extensions = ['.jpg', '.jpeg', '.webp'];
+    let attempt = 0;
+    img.addEventListener('error', function retryImage() {
+      if (attempt >= extensions.length) return;
+      const next = extensions[attempt++];
+      img.src = original.slice(0, -4) + next;
+    });
+  });
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
   const revealTargets = document.querySelectorAll('.section-label, .story-layout, .story-banner, .section-heading, .feature-card, .video-panel, .gallery-card, .character-card, .character-note, .creator-layout');
