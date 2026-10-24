@@ -15,7 +15,7 @@
   }
   // GitHub Pages is case-sensitive. If an image was uploaded as JPG/JPEG/WebP,
   // try common extensions before leaving a broken-image icon on the page.
-  document.querySelectorAll('img[src$=".png"]').forEach(img => {
+  document.querySelectorAll('img[src$=".PNG"]').forEach(img => {
     const original = img.getAttribute('src');
     const extensions = ['.jpg', '.jpeg', '.webp'];
     let attempt = 0;
