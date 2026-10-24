@@ -21,7 +21,7 @@
 
 /* Final content layout: real screenshots are shown in their relevant sections. */
 :root{--body:Arial,Helvetica,sans-serif}
-.hero{background-image:linear-gradient(180deg,rgba(4,8,14,.68),rgba(4,8,14,.88) 65%,var(--bg)),url('assets/screenshots/main.png');background-size:cover;background-position:center}
+.hero{background-image:linear-gradient(180deg,rgba(4,8,14,.68),rgba(4,8,14,.88) 65%,var(--bg)),url('assets/screenshots/main.PNG');background-size:cover;background-position:center}
 .hero-backdrop-image{display:none}
 .hero-jp{font:500 10px var(--display);letter-spacing:2px;color:var(--gold);margin:0 0 24px}
 .feature-card{min-height:0;padding-bottom:26px}
